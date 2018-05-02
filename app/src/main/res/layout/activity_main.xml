@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_userDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_id"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:maxLength="50" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_emailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_id"
+        android:inputType="textEmailAddress"
+        android:maxLength="50" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_contactNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/contact_no"
+        android:inputType="phone"
+        android:maxLength="10" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:weightSum="75">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@drawable/round_shape_button"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:textSize="@dimen/textSizeBig" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@drawable/round_shape_button"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:text="@string/update"
+            android:textAllCaps="false"
+            android:textSize="@dimen/textSizeBig"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@drawable/round_shape_button"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textSize="@dimen/textSizeBig"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_shape_button"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:text="@string/read"
+            android:textAllCaps="false"
+            android:textSize="@dimen/textSizeBig" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSizeSmall"
+            tools:text="@string/name" />
+
+        <TextView
+            android:id="@+id/tv_emailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSizeSmall"
+            tools:text="@string/email_id" />
+
+        <TextView
+            android:id="@+id/tv_contactNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSizeSmall"
+            tools:text="@string/name" />
+    </LinearLayout>
+</LinearLayout>
