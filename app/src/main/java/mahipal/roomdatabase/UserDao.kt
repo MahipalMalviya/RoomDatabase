@@ -6,11 +6,8 @@ import android.arch.persistence.room.OnConflictStrategy.REPLACE
 @Dao
 interface UserDao {
 
-    @Insert
+    @Insert(onConflict = REPLACE)
     fun insertUserData(userData : User)
-
-    @Update(onConflict = REPLACE)
-    fun updateUserData(userData: User)
 
     @Query("DELETE FROM User WHERE userId = :userId")
     fun deleteUserData(userId: Int)

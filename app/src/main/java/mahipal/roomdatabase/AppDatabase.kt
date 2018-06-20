@@ -11,16 +11,18 @@ abstract class AppDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
 
     companion object {
-        private var DATABASE_NAME = "User_db"
+        private var DATABASE_NAME = "User.db"
         private var INSTANCE: AppDatabase? = null
 
-        fun getInstance(context: Context): AppDatabase{
+        fun getInstance(context: Context): AppDatabase?{
             if (INSTANCE == null){
-                INSTANCE = Room.databaseBuilder(context.applicationContext,AppDatabase::class.java,
-                        DATABASE_NAME)
-                        .build()
+                synchronized(AppDatabase::class){
+                    INSTANCE = Room.databaseBuilder(context.applicationContext,AppDatabase::class.java,
+                            DATABASE_NAME)
+                            .build()
+                }
             }
-            return INSTANCE as AppDatabase
+            return INSTANCE
         }
 
         fun destroyInstance(){
